@@ -1,1 +1,0 @@
-projects data is not provided in the snippets you shared. If you want to see the content of `src/data/projects.js`, please provide the code or specify what you would like to know about it.
