@@ -11,7 +11,7 @@ const projects = [
   {
     id: "1",
     title: "TicketHub",
-    image: "/projects/tickethub.png",
+    image: "/tickethub.png",
 
     technologies: [
       "Next.js",
@@ -24,9 +24,9 @@ const projects = [
     description:
       "TicketHub is a full-stack online ticket booking platform where users can browse and book tickets, vendors can add tickets, and admins can manage the system.",
 
-    live: "https://tickethub.vercel.app",
+    live: "https://ticket-hub-p6hh.vercel.app",
 
-    github: "https://github.com/yourusername/tickethub-client",
+    github: "https://github.com/arifislam121416/TicketHub",
 
     challenges: [
       "Role-based authentication",
@@ -46,7 +46,7 @@ const projects = [
   {
     id: "2",
     title: "MediQueue",
-    image: "/projects/mediqueue.png",
+    image: "/mediqueue.png",
 
     technologies: [
       "React",
@@ -58,9 +58,9 @@ const projects = [
     description:
       "Doctor appointment booking system with authentication, booking management and responsive dashboard.",
 
-    live: "https://mediqueue.vercel.app",
+    live: "https://medique-client-mu.vercel.app",
 
-    github: "https://github.com/yourusername/mediqueue-client",
+    github: "https://github.com/arifislam121416/mediqueflow-client",
 
     challenges: [
       "Booking System",
@@ -77,7 +77,7 @@ const projects = [
   {
     id: "3",
     title: "SkillSphere",
-    image: "/projects/skillsphere.png",
+    image: "/skillsphere.png",
 
     technologies: [
       "Next.js",
@@ -89,9 +89,9 @@ const projects = [
     description:
       "An online learning platform for students and instructors.",
 
-    live: "https://skillsphere.vercel.app",
+    live: "https://skillsphere-e-course-platform-mr667ph2q.vercel.app",
 
-    github: "https://github.com/yourusername/skillsphere-client",
+    github: "https://github.com/arifislam121416/skillsphere-E-Course-Platform",
 
     challenges: [
       "Authentication",
