@@ -80,6 +80,7 @@ export default function Navbar() {
 
          
           {/* Download Resume Link */}
+        
           <Link
             href="/resume.pdf"
             download
