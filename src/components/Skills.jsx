@@ -38,6 +38,7 @@ const skills = {
   Tools: [
     { name: "Git", icon: <FaGitAlt />, level: "90%" },
     { name: "Vercel", icon: <SiVercel />, level: "85%" },
+    { name: "Vs Code", icon: <SiVercel />, level: "85%" },
   ],
 };
 

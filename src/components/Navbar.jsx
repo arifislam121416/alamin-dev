@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import { FiDownload, FiMoon, FiSun, FiLogOut, FiUser, FiLogIn } from "react-icons/fi";
+import { FiDownload, FiMoon, FiSun } from "react-icons/fi";
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
 
 
@@ -21,6 +21,8 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("Home");
   const [mounted, setMounted] = useState(false);
+  const [scrolled,setScrolled]=useState(false);
+
   const { theme, setTheme } = useTheme();
 
   // Better Auth React Hook
@@ -30,17 +32,48 @@ export default function Navbar() {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null;
+ useEffect(()=>{
+
+const handleScroll=()=>{
+
+setScrolled(window.scrollY>20);
+
+};
+
+window.addEventListener("scroll",handleScroll);
+
+return()=>window.removeEventListener("scroll",handleScroll);
+
+},[]);
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-transparent px-4 py-3 transition-all duration-300 lg:px-8">
-      <nav className="flex items-center justify-between rounded-full border border-slate-200/80 bg-white/80 px-6 py-3.5 shadow-lg backdrop-blur-md transition-all dark:border-slate-800/80 dark:bg-slate-900/80">
+    <header className="fixed inset-x-0 top-0 z-50">
+     <div className="mx-auto max-w-7xl px-5 pt-3">
+      <nav
+  className={`flex items-center backdrop-blur-2xl border-white/10 border-slate-200 dark:border-white/10 justify-between max-w-7xl rounded-full border px-8 transition-all duration-300
+
+${scrolled ? "h-16" : "h-20"} backdrop-blur-xl transition-all duration-300
+
+  ${
+    scrolled
+      ? "border-slate-200 bg-white/90 shadow-2xl dark:border-slate-800 dark:bg-slate-900/90"
+      : "border-slate-200/80 bg-white/70 shadow-lg dark:border-slate-800/80 dark:bg-slate-900/70"
+  }`}
+>
         
         {/* Brand Logo */}
-        <Link href="/" className="text-2xl font-black tracking-wider">
-          <span className="text-2xl font-black tracking-wider transition duration-300 hover:scale-105">AL AMIN.dev </span>
-        
-        </Link>
+      <Link href="/" className="group flex items-center gap-2">
+  <img
+src="/logo.png"
+className="h-10 w-10 rounded-full"
+/>
+
+  <div>
+    <h2 className="text-2xl font-extrabold tracking-wide text-slate-900 dark:text-white">
+      AL <span className="text-cyan-500">AMIN</span>
+    </h2>
+  </div>
+</Link>
 
         {/* Desktop Navigation Links */}
     <ul className="hidden items-center gap-8 lg:flex">
@@ -64,32 +97,43 @@ export default function Navbar() {
 </ul>
 
         {/* Right Action Buttons (Desktop) */}
-        <div className="hidden items-center gap-3 lg:flex">
-          {/* Theme Toggle */}
-          <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            aria-label="Toggle Theme"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-100/80 text-slate-700 transition duration-300 hover:scale-105 dark:border-slate-800 dark:bg-slate-800/80 dark:text-slate-300"
-          >
-            {theme === "dark" ? (
-              <FiSun className="h-5 w-5 text-amber-400" />
-            ) : (
-              <FiMoon className="h-5 w-5 text-slate-700" />
-            )}
-          </button>
+       <div className="hidden items-center gap-3 lg:flex">
+  {mounted && (
+    <button
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      aria-label="Toggle Theme"
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-100/80 text-slate-700 transition duration-300 hover:scale-105 dark:border-slate-800 dark:bg-slate-800/80 dark:text-slate-300"
+    >
+      {theme === "dark" ? (
+        <FiSun className="h-5 w-5 text-amber-400" />
+      ) : (
+        <FiMoon className="h-5 w-5 text-slate-700" />
+      )}
+    </button>
+  )}
 
-         
-          {/* Download Resume Link */}
-        
-          <Link
-            href="/resume.pdf"
-            download
-            className="flex items-center gap-2 rounded-full bg-cyan-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-cyan-500/20 transition hover:scale-105 hover:bg-cyan-600"
-          >
-            <FiDownload className="h-4 w-4" />
-            Resume
-          </Link>
-        </div>
+  <Link
+  href="/resume.pdf"
+  download
+  className="flex items-center gap-2
+group
+rounded-full
+bg-cyan-500
+px-6
+py-2
+font-semibold
+text-white
+shadow-lg
+shadow-cyan-500/30
+hover:shadow-cyan-500/60
+transition
+"
+>
+  Resume
+
+  <FiDownload className="transition-transform duration-300 group-hover:translate-y-1" />
+</Link>
+</div>
 
         {/* Mobile Toggle Button */}
         <button
@@ -100,18 +144,25 @@ export default function Navbar() {
           {open ? <HiOutlineX size={28} /> : <HiOutlineMenuAlt3 size={28} />}
         </button>
       </nav>
+     </div>
 
       {/* Mobile Menu Drawer */}
       {open && (
         <div className="mt-3 rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-2xl backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-900/95 lg:hidden">
           {/* Mobile Theme Toggle */}
-          <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="mb-4 flex w-full items-center justify-center gap-2 rounded-2xl border border-slate-200 py-3 text-sm font-medium text-slate-800 dark:border-slate-800 dark:text-slate-200"
-          >
-            {theme === "dark" ? <FiSun className="text-amber-400" /> : <FiMoon />}
-            {theme === "dark" ? "Light Mode" : "Dark Mode"}
-          </button>
+          {mounted && (
+  <button
+    onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+    aria-label="Toggle Theme"
+    className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-100/80 text-slate-700 transition duration-300 hover:scale-105 dark:border-slate-800 dark:bg-slate-800/80 dark:text-slate-300"
+  >
+    {theme === "dark" ? (
+      <FiSun className="h-5 w-5 text-amber-400" />
+    ) : (
+      <FiMoon className="h-5 w-5 text-slate-700" />
+    )}
+  </button>
+)}
 
           {/* Mobile Links */}
           <ul className="space-y-1">

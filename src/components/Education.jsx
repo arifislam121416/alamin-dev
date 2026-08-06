@@ -6,16 +6,16 @@ const education = [
   {
     id: 1,
     degree: "Master of Arts (M.A.)",
-    institution: "Your University Name",
-    duration: "2022 - 2024",
+    institution: "Ananda Mohan Govt. College, Mymensingh, Bangladesh",
+    duration: "2018 - 2020",
     description:
       "Completed a Master of Arts program with a focus on research, communication, and analytical skills while continuing to develop expertise in modern web development.",
   },
   {
     id: 2,
     degree: "Bachelor of Arts (B.A.)",
-    institution: "Your University Name",
-    duration: "2018 - 2022",
+    institution: "Govt. Saadat College, Tangail, Bangladesh",
+    duration: "2014 - 2018",
     description:
       "Completed a Bachelor of Arts program, building strong communication, critical thinking, and problem-solving skills that complement my career in software development.",
   },
