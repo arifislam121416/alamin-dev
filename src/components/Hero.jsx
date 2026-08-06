@@ -81,7 +81,7 @@ const Hero = () => {
           <div className="mt-10 flex items-center gap-5">
 
             <Link
-              href="https://github.com/yourusername"
+              href="https://github.com/arifislam121416"
               target="_blank"
               className="text-3xl text-slate-600 transition hover:text-cyan-500 dark:text-gray-300"
             >
@@ -89,7 +89,7 @@ const Hero = () => {
             </Link>
 
             <Link
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/al-amin-arif2785"
               target="_blank"
               className="text-3xl text-slate-600 transition hover:text-cyan-500 dark:text-gray-300"
             >
@@ -97,7 +97,7 @@ const Hero = () => {
             </Link>
 
             <Link
-              href="https://facebook.com/yourusername"
+              href="https://www.facebook.com/alaminarif85"
               target="_blank"
               className="text-3xl text-slate-600 transition hover:text-cyan-500 dark:text-gray-300"
             >

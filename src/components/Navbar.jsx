@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { FiDownload, FiMoon, FiSun, FiLogOut, FiUser, FiLogIn } from "react-icons/fi";
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
-import { authClient } from "@/lib/auth-client";
+
 
 
 const navLinks = [
@@ -38,7 +38,7 @@ export default function Navbar() {
         
         {/* Brand Logo */}
         <Link href="/" className="text-2xl font-black tracking-wider">
-          <span className="text-2xl font-black tracking-wider transition duration-300 hover:scale-105">ALAMIN.dev </span>
+          <span className="text-2xl font-black tracking-wider transition duration-300 hover:scale-105">AL AMIN.dev </span>
         
         </Link>
 
