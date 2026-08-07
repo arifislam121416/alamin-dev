@@ -13,7 +13,7 @@ const About = () => {
         {/* Section Title */}
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-bold">
-            About <span className="text-cyan-500">Me</span>
+            About <span className="bg-gradient-to-r from-cyan-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent">Me</span>
           </h2>
 
           <p className="mt-4 text-slate-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -29,7 +29,7 @@ const About = () => {
 
             <h3 className="text-3xl font-bold">
               Hi, I'm{" "}
-              <span className="text-cyan-500">
+              <span className="bg-gradient-to-r from-cyan-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
                 AL AMIN
               </span>
             </h3>

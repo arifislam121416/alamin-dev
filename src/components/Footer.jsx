@@ -39,7 +39,7 @@ const Footer = () => {
             <ul className="mt-4 space-y-3">
 
               <li>
-                <Link href="#home" className="hover:text-cyan-500">
+                <Link href="/#home" className="hover:text-cyan-500">
                   Home
                 </Link>
               </li>
@@ -112,16 +112,37 @@ const Footer = () => {
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-6 text-center md:flex-row dark:border-slate-800">
 
           <p className="text-slate-600 dark:text-gray-400">
-            © {year} ALAMIN.dev. All Rights Reserved.
+            © {year} ALAMIN All Rights Reserved.
           </p>
 
-          <Link
-            href="#home"
-            className="flex items-center gap-2 rounded-full bg-cyan-500 px-4 py-2 text-white transition hover:bg-cyan-600"
-          >
-            <FaArrowUp />
-            Back to Top
-          </Link>
+        <Link
+  href="/#home"
+  className="
+    group
+    flex
+    items-center
+    gap-2
+    rounded-full
+    bg-gradient-to-r
+    from-cyan-400
+    via-indigo-500
+    to-purple-600
+    px-5
+    py-2.5
+    font-semibold
+    text-white
+    shadow-lg
+    shadow-indigo-500/30
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:scale-105
+    hover:shadow-purple-500/50
+  "
+>
+  <FaArrowUp className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110" />
+  Back to Top
+</Link>
 
         </div>
 

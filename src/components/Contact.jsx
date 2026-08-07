@@ -21,7 +21,7 @@ const Contact = () => {
         {/* Heading */}
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-bold">
-            Contact <span className="text-cyan-500">Me</span>
+            Contact <span className="bg-gradient-to-r from-cyan-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent">Me</span>
           </h2>
 
           <p className="mt-4 text-slate-600 dark:text-gray-400">
@@ -126,11 +126,30 @@ const Contact = () => {
               />
 
               <button
-                type="submit"
-                className="w-full rounded-xl bg-cyan-500 py-3 font-semibold text-white transition hover:bg-cyan-600"
-              >
-                Send Message
-              </button>
+  type="submit"
+  className="
+    group
+    w-full
+    rounded-xl
+    bg-gradient-to-r
+    from-cyan-400
+    via-indigo-500
+    to-purple-600
+    py-3
+    font-semibold
+    text-white
+    shadow-lg
+    shadow-indigo-500/30
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:scale-[1.02]
+    hover:shadow-purple-500/50
+    active:scale-95
+  "
+>
+  Send Message
+</button>
 
             </div>
 

@@ -34,7 +34,7 @@ const Education = () => {
         <div className="text-center">
 
           <h2 className="text-4xl md:text-5xl font-bold">
-            My <span className="text-cyan-500">Education</span>
+            My <span className="bg-gradient-to-r from-cyan-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent">Education</span>
           </h2>
 
           <p className="mt-4 text-slate-600 dark:text-gray-400">
@@ -68,7 +68,7 @@ const Education = () => {
                   {item.duration}
                 </span>
 
-                <h3 className="mt-2 text-2xl font-bold">
+                <h3 className="mt-2 text-2xl font-bold bg-gradient-to-r from-cyan-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
                   {item.degree}
                 </h3>
 

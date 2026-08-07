@@ -42,7 +42,7 @@ export default function Projects() {
         {/* Heading */}
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-bold">
-            My <span className="text-cyan-500">Projects</span>
+            My <span className="bg-gradient-to-r from-cyan-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent">Projects</span>
           </h2>
 
           <p className="mt-4 text-slate-600 dark:text-gray-400">
@@ -89,13 +89,35 @@ export default function Projects() {
                 </div>
 
                 {/* Button */}
-                <Link
-                  href={`/projects/${project.id}`}
-                  className="mt-6 inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-5 py-3 font-semibold text-white transition hover:bg-cyan-600"
-                >
-                  View Details
-                  <FiArrowRight />
-                </Link>
+    <Link
+  href={`/projects/${project.id}`}
+  className="
+    group
+    mt-6
+    inline-flex
+    items-center
+    gap-2
+    rounded-full
+    bg-gradient-to-r
+    from-cyan-400
+    via-indigo-500
+    to-purple-600
+    px-6
+    py-2.5
+    font-semibold
+    text-white
+    shadow-lg
+    shadow-indigo-500/30
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:scale-105
+    hover:shadow-purple-500/50
+  "
+>
+  View Details
+  <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" />
+</Link>
 
               </div>
             </div>

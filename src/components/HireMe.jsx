@@ -30,7 +30,7 @@ const HireMe = () => {
 
               <h2 className="mt-6 text-4xl font-bold md:text-5xl">
                 Let's Build Something
-                <span className="text-cyan-500"> Amazing Together.</span>
+                <span className="bg-gradient-to-r from-cyan-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent"> Amazing Together.</span>
               </h2>
 
               <p className="mt-6 leading-8 text-slate-600 dark:text-gray-400">
@@ -66,21 +66,63 @@ const HireMe = () => {
               <div className="mt-10 flex flex-wrap gap-4">
 
                 <Link
-                  href="#contact"
-                  className="flex items-center gap-2 rounded-xl bg-cyan-500 px-7 py-4 font-semibold text-white transition hover:scale-105 hover:bg-cyan-600"
-                >
-                  Hire Me
-                  <FiArrowRight />
-                </Link>
+  href="#contact"
+  className="
+    group
+    flex
+    items-center
+    gap-2
+    rounded-xl
+    bg-gradient-to-r
+    from-cyan-400
+    via-indigo-500
+    to-purple-600
+    px-7
+    py-4
+    font-semibold
+    text-white
+    shadow-lg
+    shadow-indigo-500/30
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:scale-105
+    hover:shadow-purple-500/50
+  "
+>
+  Hire Me
+  <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" />
+</Link>
 
-                <Link
-                  href="/resume.pdf"
-                  download
-                  className="flex items-center gap-2 rounded-xl border border-cyan-500 px-7 py-4 font-semibold text-cyan-500 transition hover:bg-cyan-500 hover:text-white"
-                >
-                  <FiDownload />
-                  Resume
-                </Link>
+               <Link
+  href="/resume.pdf"
+  download
+  className="
+    group
+    flex
+    items-center
+    gap-2
+    rounded-xl
+    bg-gradient-to-r
+    from-cyan-400
+    via-indigo-500
+    to-purple-600
+    px-7
+    py-4
+    font-semibold
+    text-white
+    shadow-lg
+    shadow-indigo-500/30
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:scale-105
+    hover:shadow-purple-500/50
+  "
+>
+  <FiDownload className="transition-transform duration-300 group-hover:translate-y-1 group-hover:scale-110" />
+  Resume
+</Link>
 
               </div>
 

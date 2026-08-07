@@ -50,7 +50,7 @@ return()=>window.removeEventListener("scroll",handleScroll);
     <header className="fixed inset-x-0 top-0 z-50">
      <div className="mx-auto max-w-7xl px-5 pt-3">
       <nav
-  className={`flex items-center backdrop-blur-2xl border-white/10 border-slate-200 dark:border-white/10 justify-between max-w-7xl rounded-full border px-8 transition-all duration-300
+  className={`flex items-center backdrop-blur-2xl border-white/10 border-slate-200 dark:border-white/10 justify-between max-w-7xl rounded-full border px-6 transition-all duration-300
 
 ${scrolled ? "h-16" : "h-20"} backdrop-blur-xl transition-all duration-300
 
@@ -62,20 +62,27 @@ ${scrolled ? "h-16" : "h-20"} backdrop-blur-xl transition-all duration-300
 >
         
         {/* Brand Logo */}
-      <Link href="/" className="group flex items-center gap-2">
+<div>
+       <Link href="/" className="group flex items-center gap-2">
   <img
 src="/logo.png"
 className="h-10 w-10 rounded-full"
 />
 
   <div>
-    <h2 className="text-2xl font-extrabold tracking-wide text-slate-900 dark:text-white">
-      AL <span className="text-cyan-500">AMIN</span>
-    </h2>
+   <h2 className="text-2xl font-extrabold tracking-wide">
+  <span className="text-slate-900 dark:text-white">AL </span>
+  <span className="bg-gradient-to-r from-cyan-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
+    AMIN
+  </span>
+</h2>
   </div>
 </Link>
+  </div> 
 
         {/* Desktop Navigation Links */}
+<div>
+
     <ul className="hidden items-center gap-8 lg:flex">
   {navLinks.map((item) => (
     <li key={item.id}>
@@ -95,6 +102,7 @@ className="h-10 w-10 rounded-full"
     </li>
   ))}
 </ul>
+</div>
 
         {/* Right Action Buttons (Desktop) */}
        <div className="hidden items-center gap-3 lg:flex">
@@ -115,34 +123,45 @@ className="h-10 w-10 rounded-full"
   <Link
   href="/resume.pdf"
   download
-  className="flex items-center gap-2
-group
-rounded-full
-bg-cyan-500
-px-6
-py-2
-font-semibold
-text-white
-shadow-lg
-shadow-cyan-500/30
-hover:shadow-cyan-500/60
-transition
-"
+  className="
+    group
+    flex
+    items-center
+    gap-2
+    rounded-full
+    bg-gradient-to-r
+    from-cyan-400
+    via-indigo-500
+    to-purple-600
+    px-6
+    py-2.5
+    font-semibold
+    text-white
+    shadow-lg
+    shadow-indigo-500/30
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:scale-105
+    hover:shadow-purple-500/50
+  "
 >
   Resume
 
-  <FiDownload className="transition-transform duration-300 group-hover:translate-y-1" />
+  <FiDownload className="transition-transform duration-300 group-hover:translate-y-1 group-hover:scale-110" />
 </Link>
 </div>
 
         {/* Mobile Toggle Button */}
-        <button
+      <div>
+          <button
           onClick={() => setOpen(!open)}
           aria-label="Toggle Navigation Menu"
           className="text-slate-800 focus:outline-none dark:text-slate-200 lg:hidden"
         >
           {open ? <HiOutlineX size={28} /> : <HiOutlineMenuAlt3 size={28} />}
         </button>
+      </div>
       </nav>
      </div>
 

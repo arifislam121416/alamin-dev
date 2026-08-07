@@ -7,7 +7,9 @@ import {
   FaReact,
   FaNodeJs,
   FaGitAlt,
+  FaGithub,
 } from "react-icons/fa";
+import { FiFigma } from "react-icons/fi";
 
 import {
   SiNextdotjs,
@@ -16,6 +18,7 @@ import {
   SiExpress,
   SiFirebase,
   SiVercel,
+  SiNetlify,
 } from "react-icons/si";
 
 const skills = {
@@ -31,14 +34,16 @@ const skills = {
   Backend: [
     { name: "Node.js", icon: <FaNodeJs />, level: "85%" },
     { name: "Express.js", icon: <SiExpress />, level: "85%" },
-    { name: "MongoDB", icon: <SiMongodb />, level: "80%" },
-    { name: "Firebase", icon: <SiFirebase />, level: "80%" },
+    { name: "MongoDB", icon: <SiMongodb />, level: "80%" }
   ],
 
   Tools: [
     { name: "Git", icon: <FaGitAlt />, level: "90%" },
+    { name: "GitHub", icon: <FaGithub />, level: "95%" },
     { name: "Vercel", icon: <SiVercel />, level: "85%" },
-    { name: "Vs Code", icon: <SiVercel />, level: "85%" },
+    { name: "VS Code", icon: <SiVercel />, level: "85%" },
+    { name: "Figma", icon: <FiFigma />, level: "85%" },
+    { name: "Netlify", icon: <SiNetlify />, level: "85%" },
   ],
 };
 
@@ -53,7 +58,7 @@ const Skills = () => {
         {/* Heading */}
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-bold">
-            My <span className="text-cyan-500">Skills</span>
+            My <span className="bg-gradient-to-r from-cyan-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent">Skills</span>
           </h2>
 
           <p className="mt-4 text-slate-600 dark:text-gray-400">

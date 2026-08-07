@@ -26,10 +26,10 @@ const Hero = () => {
           </p>
 
           <h1 className="mt-3 text-5xl md:text-7xl font-black leading-tight">
-            AL <span className="text-cyan-500">AMIN</span>
+            AL <span className="bg-gradient-to-r from-cyan-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent">AMIN</span>
           </h1>
 
-          <h2 className="mt-4 text-2xl md:text-3xl font-semibold">
+          <h2 className="bg-gradient-to-r from-cyan-400 via-indigo-500 to-purple-600 bg-clip-text text-transparentmt-4 text-2xl md:text-3xl font-semibold">
   I'm a{" "}
   <TypeAnimation
     sequence={[
@@ -58,22 +58,65 @@ const Hero = () => {
           {/* Buttons */}
           <div className="mt-8 flex flex-wrap gap-4">
 
-            <Link
-              href="#contact"
-              className="flex items-center gap-2 rounded-xl bg-cyan-500 px-7 py-4 font-semibold text-white transition-all hover:-translate-y-1 hover:bg-cyan-600"
-            >
-              Hire Me
-              <FiArrowRight />
-            </Link>
+           <Link
+  href="#contact"
+  className="
+    group
+    flex
+    items-center
+    gap-2
+    rounded-xl
+    bg-gradient-to-r
+    from-cyan-400
+    via-indigo-500
+    to-purple-600
+    px-7
+    py-4
+    font-semibold
+    text-white
+    shadow-lg
+    shadow-indigo-500/30
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:scale-105
+    hover:shadow-indigo-500/60
+  "
+>
+  Hire Me
 
-            <Link
-              href="/resume.pdf"
-              download
-              className="flex items-center gap-2 rounded-xl border border-cyan-500 px-7 py-4 font-semibold text-cyan-500 transition-all hover:bg-cyan-500 hover:text-white"
-            >
-              <FiDownload />
-              Resume
-            </Link>
+  <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+</Link>
+
+   <Link
+  href="/resume.pdf"
+  download
+  className="
+    group
+    flex
+    items-center
+    gap-2
+    rounded-xl
+    bg-gradient-to-r
+    from-cyan-400
+    via-indigo-500
+    to-purple-600
+    px-7
+    py-4
+    font-semibold
+    text-white
+    shadow-lg
+    shadow-indigo-500/30
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:shadow-indigo-500/50
+    hover:scale-105
+  "
+>
+  Resume
+  <FiDownload className="transition-transform duration-300 group-hover:translate-y-1 group-hover:scale-110" />
+</Link>
 
           </div>
 
