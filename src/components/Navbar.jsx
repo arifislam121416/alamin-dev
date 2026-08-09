@@ -144,7 +144,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop links */}
-          <ul className="hidden font-bold items-center gap-4 lg:flex">
+          <ul className="hidden font-bold items-center gap-6 lg:flex">
             {navLinks.map((item) => (
               <li key={item.id}>
                 <Link
