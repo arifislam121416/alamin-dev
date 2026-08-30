@@ -26,8 +26,8 @@ const contactMethods = [
   {
     icon: FaEnvelope,
     label: "Email",
-    value: "arifislam54872785@gmail.com",
-    href: "mailto:arifislam54872785@gmail.com",
+    value: "alaminfreelancer1997@gmail.com",
+    href: "mailto:alaminfreelancer1997@gmail.com",
   },
 
   {
